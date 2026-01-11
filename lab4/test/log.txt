@@ -1,0 +1,323 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: add
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              TYPE: int
+            VarDec (1)
+              ID: ai
+          COMMA
+          VarList (1)
+            ParamDec (1)
+              Specifier (1)
+                TYPE: int
+              VarDec (1)
+                ID: aj
+        RP
+      CompSt (1)
+        LC
+        StmtList (2)
+          Stmt (2)
+            RETURN
+            Exp (2)
+              Exp (2)
+                ID: ai
+              PLUS
+              Exp (2)
+                ID: aj
+            SEMI
+        RC
+    ExtDefList (5)
+      ExtDef (5)
+        Specifier (5)
+          TYPE: int
+        FunDec (5)
+          ID: sub
+          LP
+          VarList (5)
+            ParamDec (5)
+              Specifier (5)
+                TYPE: int
+              VarDec (5)
+                ID: si
+            COMMA
+            VarList (5)
+              ParamDec (5)
+                Specifier (5)
+                  TYPE: int
+                VarDec (5)
+                  ID: sj
+          RP
+        CompSt (5)
+          LC
+          StmtList (6)
+            Stmt (6)
+              RETURN
+              Exp (6)
+                Exp (6)
+                  ID: si
+                MINUS
+                Exp (6)
+                  ID: sj
+              SEMI
+          RC
+      ExtDefList (9)
+        ExtDef (9)
+          Specifier (9)
+            TYPE: int
+          FunDec (9)
+            ID: mul
+            LP
+            VarList (9)
+              ParamDec (9)
+                Specifier (9)
+                  TYPE: int
+                VarDec (9)
+                  ID: mi
+              COMMA
+              VarList (9)
+                ParamDec (9)
+                  Specifier (9)
+                    TYPE: int
+                  VarDec (9)
+                    ID: mj
+            RP
+          CompSt (9)
+            LC
+            StmtList (10)
+              Stmt (10)
+                RETURN
+                Exp (10)
+                  Exp (10)
+                    ID: mi
+                  STAR
+                  Exp (10)
+                    ID: mj
+                SEMI
+            RC
+        ExtDefList (13)
+          ExtDef (13)
+            Specifier (13)
+              TYPE: int
+            FunDec (13)
+              ID: main
+              LP
+              RP
+            CompSt (13)
+              LC
+              DefList (14)
+                Def (14)
+                  Specifier (14)
+                    TYPE: int
+                  DecList (14)
+                    Dec (14)
+                      VarDec (14)
+                        ID: i
+                    COMMA
+                    DecList (14)
+                      Dec (14)
+                        VarDec (14)
+                          ID: j
+                      COMMA
+                      DecList (14)
+                        Dec (14)
+                          VarDec (14)
+                            ID: k
+                        COMMA
+                        DecList (14)
+                          Dec (14)
+                            VarDec (14)
+                              ID: l
+                          COMMA
+                          DecList (14)
+                            Dec (14)
+                              VarDec (14)
+                                ID: res
+                  SEMI
+              StmtList (15)
+                Stmt (15)
+                  Exp (15)
+                    Exp (15)
+                      ID: i
+                    ASSIGNOP
+                    Exp (15)
+                      ID: read
+                      LP
+                      RP
+                  SEMI
+                StmtList (16)
+                  Stmt (16)
+                    Exp (16)
+                      Exp (16)
+                        ID: j
+                      ASSIGNOP
+                      Exp (16)
+                        ID: read
+                        LP
+                        RP
+                    SEMI
+                  StmtList (17)
+                    Stmt (17)
+                      Exp (17)
+                        Exp (17)
+                          ID: k
+                        ASSIGNOP
+                        Exp (17)
+                          ID: read
+                          LP
+                          RP
+                      SEMI
+                    StmtList (18)
+                      Stmt (18)
+                        Exp (18)
+                          Exp (18)
+                            ID: l
+                          ASSIGNOP
+                          Exp (18)
+                            ID: read
+                            LP
+                            RP
+                        SEMI
+                      StmtList (19)
+                        Stmt (19)
+                          Exp (19)
+                            Exp (19)
+                              ID: res
+                            ASSIGNOP
+                            Exp (19)
+                              ID: add
+                              LP
+                              Args (19)
+                                Exp (19)
+                                  ID: mul
+                                  LP
+                                  Args (19)
+                                    Exp (19)
+                                      ID: sub
+                                      LP
+                                      Args (19)
+                                        Exp (19)
+                                          ID: i
+                                        COMMA
+                                        Args (19)
+                                          Exp (19)
+                                            ID: j
+                                      RP
+                                    COMMA
+                                    Args (19)
+                                      Exp (19)
+                                        ID: sub
+                                        LP
+                                        Args (19)
+                                          Exp (19)
+                                            ID: i
+                                          COMMA
+                                          Args (19)
+                                            Exp (19)
+                                              ID: j
+                                        RP
+                                  RP
+                                COMMA
+                                Args (19)
+                                  Exp (19)
+                                    ID: add
+                                    LP
+                                    Args (19)
+                                      Exp (19)
+                                        ID: k
+                                      COMMA
+                                      Args (19)
+                                        Exp (19)
+                                          ID: l
+                                    RP
+                              RP
+                          SEMI
+                        StmtList (20)
+                          Stmt (20)
+                            Exp (20)
+                              ID: write
+                              LP
+                              Args (20)
+                                Exp (20)
+                                  ID: res
+                              RP
+                            SEMI
+                          StmtList (21)
+                            Stmt (21)
+                              RETURN
+                              Exp (21)
+                                INT: 0
+                              SEMI
+              RC
+FUNCTION add :
+PARAM ai
+PARAM aj
+t1 := ai
+t2 := aj
+t0 := t1 + t2
+RETURN t0
+FUNCTION sub :
+PARAM si
+PARAM sj
+t4 := si
+t5 := sj
+t3 := t4 - t5
+RETURN t3
+FUNCTION mul :
+PARAM mi
+PARAM mj
+t7 := mi
+t8 := mj
+t6 := t7 * t8
+RETURN t6
+FUNCTION main :
+i := #0
+j := #0
+k := #0
+l := #0
+res := #0
+t10 := &i
+READ t11
+*t10 := t11
+t13 := &j
+READ t14
+*t13 := t14
+t16 := &k
+READ t17
+*t16 := t17
+t19 := &l
+READ t20
+*t19 := t20
+t22 := &res
+t26 := i
+t27 := j
+ARG t27
+ARG t26
+t25 := CALL sub
+t29 := i
+t30 := j
+ARG t30
+ARG t29
+t28 := CALL sub
+ARG t28
+ARG t25
+t24 := CALL mul
+t32 := k
+t33 := l
+ARG t33
+ARG t32
+t31 := CALL add
+ARG t31
+ARG t24
+t23 := CALL add
+*t22 := t23
+t35 := res
+WRITE t35
+t36 := #0
+RETURN t36

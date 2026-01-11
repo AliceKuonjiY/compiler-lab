@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-01-11 日 11:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Report</title>
+<meta name="author" content="yhu" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="outline-container-org0ed2cca" class="outline-2">
+<h2 id="org0ed2cca"><span class="section-number-2">1.</span> 编译原理实验－中间代码优化</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4939c53" class="outline-3">
+<h3 id="org4939c53"><span class="section-number-3">1.1.</span> 实验内容</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+在之前实验词法分析，语法分析，语义分析和中间代码生成的基础上使用数据流分析算法等消除效率低下和无法被轻易转化为机器代码的中间代码，从而将 C&#x2013;源代码翻译成的中间代码转化为语义等价但是更加简洁高效的版本。
+要求在优化代码的同时保正新生成的代码和原有代码的语义相同。
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2f19d3" class="outline-3">
+<h3 id="orgd2f19d3"><span class="section-number-3">1.2.</span> 核心优化部分</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgacda5a6" class="outline-4">
+<h4 id="orgacda5a6"><span class="section-number-4">1.2.1.</span> 无用代码消除</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+使用活跃变量分析结果，标记dead变量，对相应的死代码进行消除。
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #ffe6b3;">bool</span> <span style="color: #cbccc6;">updated</span> = <span style="color: #d4bfff;">false</span>;
+<span style="color: #ffe6b3;">Set_IR_var</span> *<span style="color: #cbccc6;">blk_out_fact</span> = VCALL(*t, getOutFact, blk);
+<span style="color: #ffe6b3;">Set_IR_var</span> *<span style="color: #cbccc6;">new_out_fact</span> = LiveVariableAnalysis_newInitialFact(t);
+<span style="color: #ffd580;">LiveVariableAnalysis_meetInto</span>(t, blk_out_fact, new_out_fact);
+<span style="color: #ffd580;">rfor_list</span>(IR_stmt_ptr, i, blk-&gt;stmts) {
+    <span style="color: #ffe6b3;">IR_stmt</span> *<span style="color: #cbccc6;">stmt</span> = i-&gt;val;
+    <span style="color: #ffa759;">if</span>(stmt-&gt;stmt_type == IR_OP_STMT || stmt-&gt;stmt_type == IR_ASSIGN_STMT) {
+        <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">def</span> = VCALL(*stmt, get_def);
+        <span style="color: #ffa759;">if</span>(def == IR_VAR_NONE) <span style="color: #ffa759;">continue</span>;
+        <span style="color: #ffa759;">if</span>(VCALL(*new_out_fact, exist, def) == <span style="color: #d4bfff;">false</span>) {
+             stmt-&gt;dead = <span style="color: #d4bfff;">true</span>;
+             updated = <span style="color: #d4bfff;">true</span>;
+        }
+    }
+    LiveVariableAnalysis_transferStmt(t, stmt, new_out_fact);
+}
+<span style="color: #ffd580;">DELETE</span>(new_out_fact);
+<span style="color: #ffd580;">remove_dead_stmt</span>(blk); <span style="color: #484f5b;">// </span><span style="color: #484f5b;">&#21024;&#38500;&#26631;&#35760;&#20026; dead &#30340;&#21464;&#37327;&#36171;&#20540;, &#23436;&#25104;&#27515;&#20195;&#30721;&#28040;&#38500;&#24037;&#20316;
+</span><span style="color: #ffa759;">return</span> updated;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org59c4de4" class="outline-4">
+<h4 id="org59c4de4"><span class="section-number-4">1.2.2.</span> 公共表达式消除</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+使用可用表达式分析的结果，对公共表达式进行消除。
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #ffe6b3;">Fact_set_var</span> *<span style="color: #cbccc6;">blk_in_fact</span> = VCALL(*t, getInFact, blk);
+<span style="color: #ffe6b3;">Fact_set_var</span> *<span style="color: #cbccc6;">new_in_fact</span> = AvailableExpressionsAnalysis_newInitialFact(t);
+<span style="color: #ffd580;">AvailableExpressionsAnalysis_meetInto</span>(t, blk_in_fact, new_in_fact);
+<span style="color: #ffd580;">for_list</span>(IR_stmt_ptr, i, blk-&gt;stmts) {
+    <span style="color: #ffe6b3;">IR_stmt</span> *<span style="color: #cbccc6;">stmt</span> = i-&gt;val;
+    <span style="color: #ffa759;">if</span>(stmt-&gt;stmt_type == IR_OP_STMT) {
+        <span style="color: #ffe6b3;">IR_op_stmt</span> *<span style="color: #cbccc6;">op_stmt</span> = (<span style="color: #ffe6b3;">IR_op_stmt</span>*)stmt;
+        <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">expr_var</span> = op_stmt-&gt;rd;
+        <span style="color: #ffa759;">if</span>(VCALL(new_in_fact-&gt;set, exist, expr_var)) <span style="color: #484f5b;">// </span><span style="color: #484f5b;">available
+</span>            stmt-&gt;dead = <span style="color: #d4bfff;">true</span>;
+    }
+    AvailableExpressionsAnalysis_transferStmt(t, stmt, new_in_fact);
+}
+<span style="color: #ffd580;">RDELETE</span>(Fact_set_var, new_in_fact);
+<span style="color: #ffd580;">remove_dead_stmt</span>(blk); <span style="color: #484f5b;">// </span><span style="color: #484f5b;">&#21024;&#38500;&#26631;&#35760;&#20026; dead &#30340;&#21487;&#29992;&#34920;&#36798;&#24335;&#36171;&#20540;</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org715f3b3" class="outline-4">
+<h4 id="org715f3b3"><span class="section-number-4">1.2.3.</span> 常量折叠</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+使用常量传播分析的结果，识别常量并进行替换。
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #ffe6b3;">Map_IR_var_CPValue</span> *<span style="color: #cbccc6;">blk_in_fact</span> = VCALL(*t, getInFact, blk);
+<span style="color: #ffe6b3;">Map_IR_var_CPValue</span> *<span style="color: #cbccc6;">new_in_fact</span> = ConstantPropagation_newInitialFact(t);
+<span style="color: #ffd580;">ConstantPropagation_meetInto</span>(t, blk_in_fact, new_in_fact);
+<span style="color: #ffd580;">for_list</span>(IR_stmt_ptr, i, blk-&gt;stmts) {
+    <span style="color: #ffe6b3;">IR_stmt</span> *<span style="color: #cbccc6;">stmt</span> = i-&gt;val;
+    <span style="color: #ffe6b3;">IR_use</span> <span style="color: #cbccc6;">use</span> = VCALL(*stmt, get_use_vec);
+    <span style="color: #ffa759;">for</span>(<span style="color: #ffe6b3;">int</span> <span style="color: #cbccc6;">j</span> = 0; j &lt; use.use_cnt; j++)
+        <span style="color: #ffa759;">if</span>(<span style="color: #f29e74; font-weight: bold;">!</span>use.use_vec[j].is_const) {
+            <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">use_var</span> = use.use_vec[j].var;
+            <span style="color: #ffe6b3;">CPValue</span> <span style="color: #cbccc6;">use_CPVal</span> = Fact_get_value_from_IR_var(new_in_fact, use_var);
+            <span style="color: #ffa759;">if</span>(use_CPVal.kind == CONST)
+                use.use_vec[j] = (IR_val){.is_const = <span style="color: #d4bfff;">true</span>, .const_val = use_CPVal.const_val};
+        }
+    ConstantPropagation_transferStmt(t, stmt, new_in_fact);
+}
+<span style="color: #ffd580;">RDELETE</span>(Map_IR_var_CPValue, new_in_fact);
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org79a5d88" class="outline-4">
+<h4 id="org79a5d88"><span class="section-number-4">1.2.4.</span> 复制传播</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #ffe6b3;">Fact_def_use</span> *<span style="color: #cbccc6;">blk_in_fact</span> = VCALL(*t, getInFact, blk);
+<span style="color: #ffe6b3;">Fact_def_use</span> *<span style="color: #cbccc6;">new_in_fact</span> = CopyPropagation_newInitialFact(t);
+<span style="color: #ffd580;">CopyPropagation_meetInto</span>(t, blk_in_fact, new_in_fact);
+<span style="color: #ffd580;">for_list</span>(IR_stmt_ptr, i, blk-&gt;stmts) {
+    <span style="color: #ffe6b3;">IR_stmt</span> *<span style="color: #cbccc6;">stmt</span> = i-&gt;val;
+    <span style="color: #ffe6b3;">IR_use</span> <span style="color: #cbccc6;">use</span> = VCALL(*stmt, get_use_vec);
+    <span style="color: #ffa759;">for</span>(<span style="color: #ffe6b3;">int</span> <span style="color: #cbccc6;">j</span> = 0; j &lt; use.use_cnt; j++)
+        <span style="color: #ffa759;">if</span>(<span style="color: #f29e74; font-weight: bold;">!</span>use.use_vec[j].is_const) {
+            <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">use_var</span> = use.use_vec[j].var;
+            <span style="color: #ffa759;">if</span>(VCALL(new_in_fact-&gt;def_to_use, exist, use_var))
+                use.use_vec[j].var = VCALL(new_in_fact-&gt;def_to_use, get, use_var);
+        }
+    CopyPropagation_transferStmt(t, stmt, new_in_fact);
+}
+<span style="color: #ffd580;">RDELETE</span>(Fact_def_use, new_in_fact);
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga2d9045" class="outline-3">
+<h3 id="orga2d9045"><span class="section-number-3">1.3.</span> 数据流分析</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+在提供的框架代码的基础上完善数据流分析的代码，以支持后续代码优化。
+根据下面方法对框架代码进行补充。
+</p>
+</div>
+<div id="outline-container-orga092079" class="outline-4">
+<h4 id="orga092079"><span class="section-number-4">1.3.1.</span> 常量传播</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>方向：forward</li>
+<li>边界：Out[Entry] = NAC</li>
+<li>初始化：In[blk] = NAC; Out[blk] = NAC;</li>
+<li>meet：In[blk] = union(all Out[pred]) // pred 为 blk 的前驱</li>
+<li>transfer：Out[blk] = union(gen[blk], (In[blk] - kill[blk]))</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf53471e" class="outline-4">
+<h4 id="orgf53471e"><span class="section-number-4">1.3.2.</span> 可用表达分析</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li>方向：forward</li>
+<li>边界：Out[Entry] = empty</li>
+<li>初始化：In[blk] = Uni(全集)，Out[blk] = Uni(全集)</li>
+<li>meet：In[blk] = intersection(all Out[pred])</li>
+<li>transfer：Out[blk] = union(gen[blk], (In[blk] - kill[blk]))</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgada7201" class="outline-4">
+<h4 id="orgada7201"><span class="section-number-4">1.3.3.</span> 活跃变量分析</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li>方向：backward</li>
+<li>边界：In[Exit] = empty</li>
+<li>初始化：In[blk] = empty，Out[blk] = empty</li>
+<li>meet：Out[blk] = union(all In[succ])</li>
+<li>transfer：In[blk] = union(gen[blk], (Out[blk] - kill[blk]))</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge343447" class="outline-4">
+<h4 id="orge343447"><span class="section-number-4">1.3.4.</span> 复制传播</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<ul class="org-ul">
+<li>方向：forward</li>
+<li>边界：Out[Entry] = Uni</li>
+<li>初始化：In[blk] = empty, Out[blk] = empty</li>
+<li>meet：In[blk] = intersection(all Out[pred])</li>
+<li>transfer：</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #ffa759;">if</span>(VCALL(fact-&gt;def_to_use, exist, new_def)) {
+    <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">use</span> = VCALL(fact-&gt;def_to_use, get, new_def);
+    VCALL(fact-&gt;def_to_use, delete, new_def);
+    VCALL(fact-&gt;use_to_def, delete, use);
+}
+<span style="color: #ffa759;">if</span>(VCALL(fact-&gt;use_to_def, exist, new_def)) {
+    <span style="color: #ffe6b3;">IR_var</span> <span style="color: #cbccc6;">def</span> = VCALL(fact-&gt;use_to_def, get, new_def);
+    VCALL(fact-&gt;use_to_def, delete, new_def);
+    VCALL(fact-&gt;def_to_use, delete, def);
+}
+<span style="color: #ffd580;">VCALL</span>(fact-&gt;def_to_use, set, def, use);
+<span style="color: #ffd580;">VCALL</span>(fact-&gt;use_to_def, set, use, def);
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d0a6dd" class="outline-3">
+<h3 id="org8d0a6dd"><span class="section-number-3">1.4.</span> 总结</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+本次实验主要的难点在于根据数据流分析算法设计，读懂框架代码，完成算法的代码实现。之后使用数据流分析结果进行代码优化的部分实现就非常灵活，可以使用多种优化手段。我的代码只使用了死代码消除优化，但也取得了不错的效果。若想继续提高优化效率，可以尝试其他全局优化和循环不变代码外提。
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
